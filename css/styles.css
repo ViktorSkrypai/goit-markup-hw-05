@@ -25,6 +25,8 @@
   --border-color: #eeeeee;
   --header-border-color: #ececec;
   --svg-grey-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-duration: 2000ms;
 }
 
 body {
@@ -53,6 +55,22 @@ img {
   list-style: none;
   margin: 0px;
   padding: 0px;
+}
+
+/* общие css переходы для всех классов */
+.site-nav .link,
+.header-adress .adress-link,
+.nav-svg,
+.social-link-team,
+.client-link,
+.footer-contact-adress,
+.footer-contact,
+.social-link,
+.port-button {
+  transition: color var(--timing-duration) var(--timing-function),
+    fill var(--timing-duration) var(--timing-function),
+    background-color var(--timing-duration) var(--timing-function),
+    border-color var(--timing-duration) var(--timing-function);
 }
 
 /*----------------------------------------------------------------*/
@@ -144,7 +162,6 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -166,7 +183,6 @@ img {
 
   align-items: center;
   justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover,
@@ -410,8 +426,6 @@ img {
   height: 44px;
   display: flex;
   border-radius: 50%;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-buttons-team .item:last-child {
@@ -446,8 +460,6 @@ img {
   border-radius: 4px;
   fill: var(--svg-grey-color);
   cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -491,7 +503,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact {
@@ -502,7 +513,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adress .item {
@@ -557,8 +567,6 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
@@ -606,8 +614,6 @@ img {
   text-align: center;
   padding: 6px 22px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-buttons .item {
